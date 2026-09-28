@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt - Spotify Rewards</title>
+    <title>Comprobante de Pago - Spotify Rewards</title>
     <!-- Imports Inter font for premium design and Dancing Script for signature -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -246,7 +246,7 @@
 
     <!-- Green Subheader -->
     <div class="spSub">
-        <h2 class="spSubTitle">Payment Receipt</h2>
+        <h2 class="spSubTitle">Comprobante de Pago</h2>
     </div>
 
     <!-- Body -->
@@ -254,16 +254,16 @@
         <!-- Sender and Recipient -->
         <div class="spFromTo">
             <div>
-                <div class="spFromTitle">From:</div>
+                <div class="spFromTitle">De:</div>
                 <div class="spFromVal">Spotify Media Service AB</div>
                 <div class="spFromSub">Regeringsgatan 19</div>
-                <div class="spFromSub">Stockholm, Sweden</div>
+                <div class="spFromSub">Estocolmo, Suecia</div>
                 <div class="spFromSub" style="font-size: 8px; margin-top: 1px; color:#888;">VAT: SE556703748501</div>
             </div>
             <div style="text-align:right">
-                <div class="spToTitle">To:</div>
-                <div id="to-name" class="spToVal">Loading...</div>
-                <div id="to-email" class="spToSub">Loading...</div>
+                <div class="spToTitle">Para:</div>
+                <div id="to-name" class="spToVal">Cargando...</div>
+                <div id="to-email" class="spToSub">Cargando...</div>
             </div>
         </div>
 
@@ -271,14 +271,14 @@
         <table class="spTable">
             <thead>
                 <tr>
-                    <th style="text-align:left">Description</th>
-                    <th style="text-align:center; width: 30px;">Qty.</th>
+                    <th style="text-align:left">Descripción</th>
+                    <th style="text-align:center; width: 30px;">Cant.</th>
                     <th style="text-align:right; width: 70px;">Total</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Payment for music track evaluations / SoundRate</td>
+                    <td>Pago por evaluaciones de canciones / SoundRate</td>
                     <td style="text-align:center; color:#555">6</td>
                     <td id="item-total" style="text-align:right; font-weight:700;">$438.77</td>
                 </tr>
@@ -287,7 +287,7 @@
 
         <!-- Total -->
         <div class="spTotalRow">
-            <span class="spTotalLabel">Total Paid</span>
+            <span class="spTotalLabel">Total Pagado</span>
             <span id="invoice-total" class="spTotalVal">$438.77</span>
         </div>
     </div>
@@ -297,15 +297,15 @@
         <!-- Issuance Metadata -->
         <div class="spMeta">
             <div><strong>Ref.:</strong> <span id="ref-number-meta">SP-583291</span></div>
-            <div><strong>Issued:</strong> <span id="invoice-date">--/--/----</span></div>
-            <div class="spMetaNote">Document electronically issued. Valid without physical signature.</div>
+            <div><strong>Emitido:</strong> <span id="invoice-date">--/--/----</span></div>
+            <div class="spMetaNote">Documento emitido electrónicamente. Válido sin firma física.</div>
         </div>
 
         <!-- Cursive Signature -->
         <div class="spSignArea">
             <div class="spSignVal">Christian Luiga</div>
             <div class="spSignLine">
-                <div class="spSignRole">Chief Financial Officer (CFO)</div>
+                <div class="spSignRole">Director Financiero (CFO)</div>
                 <div class="spSignCompany">Spotify Media Service AB</div>
             </div>
         </div>
@@ -315,11 +315,11 @@
     <div class="spPaymentInfo">
         <div class="spPayMethod">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-            <span><strong>Payment method:</strong> Bank transfer</span>
+            <span><strong>Método de pago:</strong> Transferencia bancaria</span>
         </div>
         <div class="spWarningBox">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1DB954" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top: 1px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <span><strong>Notice:</strong> The funds will be deposited to the credit card registered on the platform.</span>
+            <span><strong>Aviso:</strong> Los fondos se depositarán en la tarjeta de crédito registrada en la plataforma.</span>
         </div>
     </div>
 
@@ -341,7 +341,7 @@
     var params = new URLSearchParams(window.location.search);
     
     // Name and Email
-    document.getElementById('to-name').textContent = params.get('nome') || 'Music Evaluator';
+    document.getElementById('to-name').textContent = params.get('nome') || 'Evaluador de Música';
     document.getElementById('to-email').textContent = params.get('email') || '';
     
     // Balance (default: 438.77)
@@ -359,7 +359,7 @@
     
     // Automatic issuance date (today)
     var today = new Date();
-    var dateStr = today.toLocaleDateString('en-US', { day:'2-digit', month:'2-digit', year:'numeric' });
+    var dateStr = today.toLocaleDateString('es-ES', { day:'2-digit', month:'2-digit', year:'numeric' });
     document.getElementById('invoice-date').textContent = dateStr;
 </script>
 
