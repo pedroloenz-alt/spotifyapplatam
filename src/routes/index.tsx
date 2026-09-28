@@ -4,15 +4,15 @@ import { useEffect } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Spotify Rewards – Evaluate & Earn" },
+      { title: "Spotify Rewards – Evalúa y Gana" },
       {
         name: "description",
-        content: "Evaluate music and earn rewards with Spotify Rewards.",
+        content: "Evalúa música y gana recompensas con Spotify Rewards.",
       },
-      { property: "og:title", content: "Spotify Rewards – Evaluate & Earn" },
+      { property: "og:title", content: "Spotify Rewards – Evalúa y Gana" },
       {
         property: "og:description",
-        content: "Evaluate music and earn rewards with Spotify Rewards.",
+        content: "Evalúa música y gana recompensas con Spotify Rewards.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,9 +29,9 @@ function Index() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <p className="text-sm text-muted-foreground">
-        Redirecting to app…{" "}
+        Redirigiendo a la aplicación…{" "}
         <a href="/app.html" className="text-primary underline">
-          Open app
+          Abrir aplicación
         </a>
       </p>
     </div>
